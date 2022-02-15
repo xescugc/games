@@ -100,17 +100,16 @@ func (s *Snake) Update() {
 		p.Direction = parentDirection
 		parentDirection = aux
 
-		if p.X < 0 {
+		if p.X <= 0 {
 			p.X = float64(screenW)
-		} else if p.X > float64(screenW) {
+		} else if p.X >= float64(screenW) {
 			p.X = 0
-		} else if p.Y < 0 {
+		} else if p.Y <= 0 {
 			p.Y = float64(screenH)
-		} else if p.Y > float64(screenH) {
+		} else if p.Y >= float64(screenH) {
 			p.Y = 0
 		}
 	}
-
 }
 
 func (s *Snake) Head() *Part { return s.Parts[0] }
