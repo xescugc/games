@@ -17,7 +17,7 @@ func main() {
 	rand.Seed(time.Now().UnixNano())
 	ebiten.SetWindowTitle("Snake")
 	ebiten.SetWindowResizable(true)
-	screenW, screenH = ebiten.WindowSize()
+	screenW, screenH = ebiten.ScreenSizeInFullscreen()
 	g := &Game{
 		Snake: &Snake{
 			Parts: []*Part{
